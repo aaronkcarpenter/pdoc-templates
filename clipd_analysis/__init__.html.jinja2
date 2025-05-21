@@ -1,0 +1,40 @@
+{% extends "default/module.html.jinja2" %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/copy.js"></script>
+{% endblock %}
+
+
+{% block nav_title %}
+<div class="project-header">
+  <img src="{{ logo }}" class="project-logo">
+  <div class="project-meta">
+    <h1>CLIPD Analysis Framework</h1>
+    <div class="version-badge">v2.3</div>
+  </div>
+</div>
+{% endblock %}
+
+{% block style %}
+{{ super() }}
+<link rel="stylesheet" href="main.css">
+<style>
+  :root {
+    --pdoc-primary: #2A5CAA;
+    --pdoc-accent: #FF6B6B;
+  }
+  
+  .algorithm-diagram {
+    border: 1px solid var(--pdoc-primary);
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+</style>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="copy.js"></script>
+{% endblock %}
